@@ -10,12 +10,12 @@ public class BoardBilder
 
     public void Run(string board)
     {
-        var rows = board.Split('\n');
+        var rows = board.Split(
+            System.Environment.NewLine.ToCharArray(), 
+            System.StringSplitOptions.RemoveEmptyEntries
+        );
         System.Array.Reverse(rows);
-
-        int rowsCount = rows.Length;
-        int columnsCount = rowsCount > 0 ? rows[0].Length : 0;
-
+        
         for (int height = 0; height < rows.Length; ++height)
         {
             var row = rows[height].ToCharArray();
