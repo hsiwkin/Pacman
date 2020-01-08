@@ -354,5 +354,5 @@ MonoBehaviour:
     type: 3}
   crate: {fileID: 4705462619860354368, guid: 635f2f8f50ec048e8bd6af0d9f4b9b15, type: 3}
   wall: {fileID: 1291208983965567330, guid: e546ffb25d37e468c8bec9f97960c3f5, type: 3}
-  player: {fileID: 0}
+  player: {fileID: 3726872660681212703, guid: d21f21af715250d4bba5669d5a50289d, type: 3}
   board: {fileID: 4900000, guid: 36fda07a7b5a2cc4a9831c4088df03ad, type: 3}

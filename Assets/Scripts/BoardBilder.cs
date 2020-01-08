@@ -106,7 +106,7 @@ public class BoardBilder
     {
         return Object.Instantiate(
             player,
-            new Vector3(width, 0, height),
+            new Vector3(width, player.transform.position.y, height),
             Quaternion.identity
         );
     }
