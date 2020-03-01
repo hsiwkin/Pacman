@@ -15,16 +15,22 @@ public class BoardBilder
             System.StringSplitOptions.RemoveEmptyEntries
         );
         System.Array.Reverse(rows);
-        
-        for (int height = 0; height < rows.Length; ++height)
+
+        int boardHeight = rows.Length;
+        int boardWidth = -1;
+
+        for (int height = 0; height < boardHeight; ++height)
         {
             var row = rows[height].ToCharArray();
+            boardWidth = Mathf.Max(boardWidth, row.Length);
 
-            for (int width = 0; width < row.Length; ++width)
+            for (int width = 0; width < boardWidth; ++width)
             {
                 CreateElement(row[width], width, height);
             }
         }
+
+        GameObject.Find("Main Camera").GetComponent<CameraController>().Callibrate(boardWidth, boardHeight);
     }
 
     private void CreateElement(char elementSign, int width, int height)
